@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.light img {width:100px; height: 100px; }
+</style>
+<script type="text/javascript">
+var flag = true;
+function trunOff(){
+	var op;
+	var path;
+	flag = !flag;
+	if(flag == true){
+		path = "images/light_on.jpg"
+	}else{
+		path = "images/light_off.jpg"
+	}
+	document.getElementById("click").src = path;
+}
+</script>
+</head>
+<body>
+<div class="light">
+	<img src="images/light_on.jpg" id="click" onclick="trunOff()">
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#aaa:link{ color: hotpink; text-decoration: none;}
+	#aaa:visited { color: red;}
+	#aaa:hover {text-decoration: overline; color:black;}
+	#aaa:active {background-color: aqua;}
+	div{
+		width: 200px; height: 100px; color: blue;
+		background-color: green; opacity: 0.9;
+	}
+	div:hover{
+		width: 400px; height: 50px; color: red;
+		background-color: yellow; opacity: 0.5;
+		transition: all 0.5s linear 0.5s; /* all: 여기있는 모든 세팅값을 0.5초 안에 완성해주세요 linear: 마우스가 올라가면 0.5초있다가 시작 */
+	}
+</style>
+</head>
+<body>
+<div>
+	가상 클래스를 이용한 내용
+</div>
+	<a id = "aaa" href="#">클릭</a><hr>
+	link : 방문하지 않은 곳<br>
+	visited : 방문한 곳<br>
+	hover : 마우스 올라갔을 때<br>
+	active : 클릭 순간
+</body>
+</html>

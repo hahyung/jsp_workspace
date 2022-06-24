@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+nav ul { list-style: none; display: flex; 
+		justify-content: flex-end;} /* justify-content 양쪽 끝으로 보냄 */
+nav ul li { /* background-color: green; */
+				  /* 위 오 아 왼 쪽 시계방향으로 적용*/
+			padding: 10px;	/* 안쪽으로 밈, 두개만 쓴다면 첫번째는 왼쪽 아래쪽 두번째는 오른쪽 위쪽 */
+			margin: 0 3px; /* 밖으로 밈 , 두개 사용할시 위아래, 왼오른쪽 */
+			}
+nav ul li a { text-decoration: none; color: white;}
+nav ul li a:hover {
+	color: orange;
+	padding-bottom: 3px;
+	border-bottom: 3px solid orange;
+	transition : all 0.25s;
+}
+div { background-color: blue; height: 100px;
+		overflow: hidden;} /* overflow-hidden : 부모의 값을 벗어나면 벗어난값은 숨긴다 */
+div div {background-color: red; height: 200px; width: 200px;}
+
+</style>
+
+</head>
+<body>
+	<div>
+		hello
+		<div>
+			css
+		</div>
+	</div>
+	
+	<hr>
+	<nav style="background-color: black;">
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">BOARD</a></li>
+			<li><a href="#">MEMBER_SHIP</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+		* {
+			margin: 0;
+			padding: 0;  
+		}
+		.header { position: fixed; top:0;
+			z-index: 1111; background-color: white;
+			width: 100%;
+			height: 15%; background-image: url('test_image/logo.png'); 
+			background-position: 700px; background-size: 100px;
+			background-repeat:no-repeat;
+			top: 0px;}
+		.title { font-size: 60pt; font-family: 'Shadows Into Light', cursive;
+				text-align: center;}
+		nav { background-color: black;}
+		nav ul {display: flex; justify-content: flex-end;
+			list-style: none;}
+		nav ul li {padding: 10px; margin: 0 3px;}
+		nav ul li a { text-decoration: none; color: white;}
+		nav ul li:hover {background-color: orange;}
+		img {
+			list-style: none; width: 100%; height: auto; 
+  			display: block; margin: auto;
+			border: 1px solid red;
+		}
+		
+		ol, ul {
+			list-style: none; 
+		}
+		body {
+			background: #eee;
+			font-size: 12px;
+			font-family: dotum;
+		}
+		section.container {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		
+			
+			margin: 0 auto;
+			box-shadow: 10px 1px 3px rgba(0,0,0,0	1);
+            border: 10px solid #fff;
+
+			
+			
+		}
+		section ul.banner_mask{
+			overflow: hidden;
+			position: absolute;
+			width: 2000px;
+			height: 900px;
+			
+
+		}
+		section ul.banner_mask li{   /*컨테이너를 따라감*/
+			position: absolute;
+			top: 0;
+			opacity: 0;
+
+		}
+		section.container label {
+			float: left;
+			position: relative; left: 900px; top: 830px;
+			width: 16px;
+			height: 16px;
+			border-radius: 50px/50px;
+			background-color:rgba(0,0,0,0.4);
+			margin-left: 5px;
+			line-height: 16px;
+			text-align: center;
+			cursor: pointer; /*손가락*/
+			z-index: 1000;
+		}
+		section.container input.banner_input1:checked ~ label.label_btn1, /*라벨1의 색깔이 바껴라*/
+		section.container input.banner_input2:checked ~ label.label_btn2,
+		section.container input.banner_input3:checked ~ label.label_btn3,
+		section.container input.banner_input4:checked ~ label.label_btn4,
+		section.container input.banner_input5:checked ~ label.label_btn5
+		{
+			background: yellow;
+			color: black 0.4; 
+			
+		}
+		section.container input {
+			display: none;
+		}
+
+		section.container input.banner_input1:checked ~ .banner_mask li:nth-child(1),
+		section.container input.banner_input2:checked ~ .banner_mask li:nth-child(2),
+		section.container input.banner_input3:checked ~ .banner_mask li:nth-child(3),
+		section.container input.banner_input4:checked ~ .banner_mask li:nth-child(4),
+		section.container input.banner_input5:checked ~ .banner_mask li:nth-child(5)
+		 /*클릭시 이미지나옴*/
+		{
+			-webkit-animation: none;
+			transition:opacity 1s ;
+			opacity: 1 ; 
+			z-index: 10;
+		}
+
+		section.container input:checked ~ .banner_mask li{
+			-webkit-animation: slideOut 1s ;
+		}
+		@-webkit-keyframes slideOut{
+			0%{opacity: 1;}
+			100%{opacity:0;}
+		}

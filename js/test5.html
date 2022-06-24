@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+#board {
+	display: flex;
+}
+
+#img {
+	width: 100px;
+	height: 100px;
+	padding: 150px 0 0 0;
+}
+
+#pic {
+	width: 400px;
+	height: 400px;
+}
+</style>
+
+<script type="text/javascript">
+
+img1 = '<img src="images/최근상품01.jpg" id="pic"/>'
+img2 = '<img src="images/최근상품02.jpg" id="pic"/>'
+img3 = '<img src="images/최근상품03.jpg" id="pic"/>'
+img4 = '<img src="images/최근상품04.jpg" id="pic"/>'
+img5 = '<img src="images/최근상품05.jpg" id="pic"/>'
+img6 = '<img src="images/최근상품06.jpg" id="pic"/>'
+img7 = '<img src="images/최근상품07.jpg" id="pic"/>'
+img8 = '<img src="images/최근상품08.jpg" id="pic"/>'
+
+
+var e
+var x = 1
+var arr = [ 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8' ]
+function init() {
+	document.getElementById("pic").src = "images/최근상품0" + x
+			+ ".jpg";
+	x += 1
+	e = setTimeout('init()', 2000)
+	if (x == 9) {
+		x = 1
+	}
+}
+function stop() {
+	clearTimeout(e)
+}
+function next() {
+	if (x == 8)
+		x = 1;
+	else
+		x = x + 1;
+	document.getElementById("pic").src = "images/최근상품0" + x
+			+ ".jpg";
+	console.log("다음 : " + x);
+}
+function back() {
+	if (x == 1)
+		x = 8;
+	else
+		x = x - 1;
+	document.getElementById("pic").src = "images/최근상품0" + x
+			+ ".jpg";
+	console.log("이전 : " + x);
+}
+
+</script>
+
+</head>
+<body onload='init()'>
+	<div id='board'>
+		<div>
+			<img src="images/왼쪽화살표.jpg" id = "img" onClick="back()"/>
+		</div>
+		<div  id="image" onmouseover="stop()" onmouseout="init()">
+			<img src="images/최근상품01.jpg" id="pic"/>
+		</div>
+		<div>
+			<img src="images/오른쪽화살표.jpg" id = "img" onClick="next()"/>
+		</div>
+	</div>
+</body>
+</html>

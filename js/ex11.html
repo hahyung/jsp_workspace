@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function test(){
+		var result = confirm("정말로 삭제??")
+		//확인이면 true, 아니면 false
+		if(result){
+			alert('삭제 되었습니다.')
+		}else{
+			alert('취소!!')
+		}
+	}
+	function test1(){
+		window.open("ex06.html","","width=300, height=300")
+	}
+	//function test2(){
+	//	window.close()
+	//}
+</script>
+<button onclick="test()">삭제</button>
+<button onclick="test1()">새창</button>
+<!-- <button onclick="test2()">창닫기</button> -->
+</body>
+</html>

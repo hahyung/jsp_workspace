@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>banner slider</title>
+	<link rel="stylesheet" href="m1.css">
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		
+		<h3 class="title">cake</h3>
+		<nav>
+			<ul>
+				<li> <a href="#">HOME</a></li>
+				<li> <a href="#">MYPAGE</a></li>
+				<li> <a href="#">LOGIN</a></li>
+			</ul>
+		</nav>
+	</div>
+	<section class="container">
+		<input id="select1" type="radio" name="radioBanner" class="banner_input1" checked="">
+		<label for="select1" class="label_btn1"></label>
+
+		<input id="select2" type="radio" name="radioBanner"  class="banner_input2">
+		<label for="select2" class="label_btn2" ></label>
+
+		<input id="select3" type="radio" name="radioBanner" class="banner_input3">
+		<label for="select3" class="label_btn3" ></label>
+
+		<input id="select4" type="radio" name="radioBanner" class="banner_input4">
+		<label for="select4" class="label_btn4"></label>
+
+		<input id="select5" type="radio" name="radioBanner" class="banner_input5">
+		<label for="select5" class="label_btn5"></label>
+
+		<ul class="banner_mask">
+			<li><a href="#"><img src="test_image/c6.jpg"></a></li>
+			<li><a href="#"><img src="test_image/c2.jpg"></a></li>
+			<li><a href="#"><img src="test_image/c3.jpg"></a></li>
+			<li><a href="#"><img src="test_image/c4.jpg"></a></li>
+			<li><a href="#"><img src="test_image/c5.jpg"></a></li>
+		</ul> 
+	</section>
+
+</body>
+</html>

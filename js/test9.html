@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.img{width:70px;height:50px;  }
+	#image{ height:800px; }
+	#image.dark{background:black; opacity:0.2; }
+	#del{display: none;}
+	#del.a{ display:block; width:700px;height:550px;
+	 		background:#515151; opacity:0.8; border:10px solid #FFA7A7;
+			position: absolute; left: 200px; top: 150px;
+		}
+	#target { width:650px;height:400px; margin:10px 10px 10px 25px;}
+	#div_x{ position:absolute; top:0; right:0; text-align:center; 
+			width:30px; height:30px; color:white;  }
+	#div_x:hover { background:darkgray; }
+	#name{ text-align:center; text-shadow: aqua;}
+</style>
+<script type="text/javascript">
+	function init(){
+		var img=[];
+		let sImg = document.getElementsByClassName("img");
+		for(i=0;i<sImg.length;i++){
+			sImg[i].addEventListener('click',img_listener);
+		}
+	}
+	function img_listener(event){
+		console.log("이미지 실행 : "+event.target.id)
+		document.getElementById("target").src = "images/car0" + event.target.id + ".png";
+		
+		let basics = document.querySelector("#image")
+		image.setAttribute('class','dark')
+		
+		let del = document.querySelector("#del")
+		del.setAttribute('class','a')
+	}
+	function imgClose(){
+		let del = document.querySelector('#del');
+		del.removeAttribute('class');
+    	
+    	let basics = document.querySelector("#image")
+		image.removeAttribute('class');
+	}
+</script>
+</head>
+<body onload = "init()">
+	<div id="image">
+		<header><h3>light box</h3>
+			<img class= "img" id="1" alt="" src="images/car01.png" id="pic"/>
+			<img class= "img" id="2" alt="" src="images/car02.png" id="pic"/>
+			<img class= "img" id="3" alt="" src="images/car03.png" id="pic"/>
+		</header>
+	</div>
+	<div id="del">
+		<div align="right" style="font-size: 15pt;">
+			<div id="name"><h3 style="color:#FFD8D8;">2 0 1 9 &nbsp;Super_Car </h3></div>
+			<div id="div_x" onclick="imgClose()">x</div>
+			<hr>
+		</div>
+		<img id="target" alt=""  >
+	</div>
+</body>
+</html>
