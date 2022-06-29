@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script src="jquery-3.6.0.min.js"></script>  방법1 직접 파일을 다운로드 받아서 사용-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- 방법2 사이트에서 jquery를 받아와서 사용하겠다-->
+
+<script type="text/javascript">
+	/* $(document).ready(function(){  페이지가 시작하면 기능을 준비 
+		$("button").click(function(){  버튼이 클릭이 일어나면 함수를 실행 
+			$("p").hide()  p태그를 숨긴다 
+		})
+		$("#s").click(function(){ 
+			$("p").show() 
+		})
+	}) */
+	
+	/*
+	$().ready(function(){   -document 생략 가능
+		$("button").click(function(){ 
+			$("p").hide() 
+		})
+		$("#s").click(function(){ 
+			$("p").show() 
+		})
+	})
+	*/
+	/*
+	$(function(){   -ready도 생략 가능
+		$("button").click(function(){ 
+			$("p").hide() 
+		})
+		$("#s").click(function(){ 
+			$("p").show() 
+		})
+	})
+	*/
+	
+	function hi(){
+		$("p").hide()
+	}
+	function sh(){
+		//document.getElementById("p").style.display='block'
+		$("p").show() 
+	}
+</script>
+</head>
+<body>
+	<p id="p">안녕하세요</p>
+	<button onclick="hi()">클릭</button>
+	<button id ="s" onclick="sh()">보이기</button>
+</body>
+</html>
